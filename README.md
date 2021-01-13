@@ -1,1 +1,2 @@
-# README
+# Dotfiles
+Public dotfiles collection
