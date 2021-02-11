@@ -1,0 +1,71 @@
+# startship
+
+[aws]
+symbol = "aws:"
+format = '[$symbol$profile(\($region\))]($style) '
+
+[battery]
+disabled = true
+
+[character]
+disabled = false
+use_symbol_for_status = true
+
+[cmd_duration]
+disabled = false
+format = "[$duration]($style) "
+min_time = 500
+show_milliseconds = true
+
+[directory]
+disabled = false
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncate_to_repo = true
+truncation_length = 0
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+
+[hostname]
+disabled = false
+format = "[$hostname]($style) "
+ssh_only = false
+trim_at = "."
+
+[line_break]
+disabled = false
+
+[memory_usage]
+disabled = true
+
+[python]
+disabled = false
+pyenv_prefix = ""
+pyenv_version_name = false
+scan_for_pyfiles = false
+symbol = ""
+
+[ruby]
+symbol = ""
+
+[terraform]
+format = "[$symbol$workspace]($style) "
+symbol = "tf:"
+
+[time]
+disabled = false
+#time_format = "[ %F %T ]"
+time_format = "[ %Y%m%d.%H%M%S ]"
+format = "[$time]($style)"
+style = ""
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style) "
+
+#[custom.foo]
+#command = "echo $!"
+#when = "true"
+#prefix = " foo "
+#disabled = false
