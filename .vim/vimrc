@@ -23,6 +23,7 @@ set shiftwidth=2
 set showmatch
 set smarttab
 set switchbuf=usetab
+set synmaxcol=200
 set tabstop=2
 set ttyfast
 set wildmenu
@@ -64,6 +65,9 @@ let g:ale_lint_on_save=1
 
 "-- ansible --
 "let g:ansible_unindent_after_newline=1
+
+"-- rocannon --
+let g:rocannon_bypass_colorscheme=1
 
 "-- terraform --
 let g:terraform_fmt_on_save=1
@@ -114,6 +118,8 @@ set pastetoggle=<F8>
 
 nnoremap <silent><leader>n :NERDTreeFocus<cr>
 
+map Q <nop>
+
 "-- list --
 "set list
 set listchars=tab:»·,trail:×,extends:»,precedes:«,eol:↲
@@ -130,19 +136,12 @@ if has('autocmd')
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g'\"" |
     \ endif
-
-  augroup templates
-    autocmd BufNewFile *.md 0r ~/.vim/templates/skeletor.md
-    autocmd BufNewFile *.py 0r ~/.vim/templates/skeletor.py
-    autocmd BufNewFile *.sh 0r ~/.vim/templates/skeletor.bash
-    autocmd BufNewFile *.tf 0r ~/.vim/templates/skeletor.tf
-    autocmd BufNewFile *.yml 0r ~/.vim/templates/skeletor-ansible.yml
-  augroup END
-
 endif
 
 "-- folding --
 set foldmethod=syntax
+"set foldmethod=indent
+"set foldmethod=manual
 set foldlevelstart=99
 let g:sh_fold_enabled=1
 
