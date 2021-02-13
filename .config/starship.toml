@@ -26,6 +26,12 @@ truncation_length = 0
 [git_branch]
 format = "[$symbol$branch]($style) "
 
+[git_commit]
+only_detached = false
+tag_disabled = false
+tag_symbol = ""
+disabled = false
+
 [hostname]
 disabled = false
 format = "[$hostname]($style) "
